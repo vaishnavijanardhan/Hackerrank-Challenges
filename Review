@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    
+     public static void main(String[] args){
+         Scanner input = new Scanner(System.in);
+         int n = input.nextInt();
+        input.nextLine();
+         String[] words = new String[n];
+         StringBuffer even = new StringBuffer();
+         StringBuffer odd = new StringBuffer();
+         
+         for (int i=0; i<n; i++){
+             words[i] = input.nextLine();
+             
+             for (int j=0; j<words[i].length(); j++){
+                 if (j%2==0){
+                     even.append(words[i].charAt(j));
+                 
+                 }else {
+                 odd.append(words[i].charAt(j));
+                 }
+             }
+             
+             System.out.println(even+" "+odd);
+             even.delete(0,even.length());
+             odd.delete(0, odd.length());
+             
+         }
+        
+     }
+        
+    }
+
